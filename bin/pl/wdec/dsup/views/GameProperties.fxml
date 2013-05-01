@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Button?>
+<?import pl.wdec.dsup.controller.GmPropController ?>
+<GridPane fx:id="view" xmlns:fx="http://javafx.com/fxml" hgap="10.0"
+	vgap="10.0" fx:controller="pl.wdec.dsup.controller.GmPropController">
+	<padding>
+		<Insets bottom="10.0" top="10.0" right="10.0" left="10.0" />
+	</padding>
+	<Label text="Majątek trwały firmy" GridPane.columnIndex="0"
+		GridPane.rowIndex="0" />
+	<TextField fx:id="fixedAssets" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER_RIGHT" />
+	<Label text="zł" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+
+	<Label text="Maksymalny kredyt" GridPane.columnIndex="0"
+		GridPane.rowIndex="1" />
+	<TextField fx:id="maxCredit" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="1" alignment="CENTER_RIGHT" />
+	<Label text="zł" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+
+	<Label text="Ilość gotówki" GridPane.columnIndex="0"
+		GridPane.rowIndex="2" />
+	<TextField fx:id="cash" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="2" alignment="CENTER_RIGHT" />
+	<Label text="zł" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+
+	<Label text="Zadłużenie firmy" GridPane.columnIndex="0"
+		GridPane.rowIndex="3" />
+	<TextField fx:id="debt" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="3" alignment="CENTER_RIGHT" />
+	<Label text="zł" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+	<Label text="Amortyzacja" GridPane.columnIndex="0"
+		GridPane.rowIndex="4" />
+	<TextField fx:id="depreciation" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="4" alignment="CENTER_RIGHT" />
+	<Label text="zł" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+	<Label text="Koszty stałe produktu zwykłego"
+		GridPane.columnIndex="0" GridPane.rowIndex="5" />
+	<TextField fx:id="fixedCosts" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="5" alignment="CENTER_RIGHT" />
+	<Label text="zł" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+
+	<Label text="Oprocentowanie konta bankowego"
+		GridPane.columnIndex="0" GridPane.rowIndex="6" />
+	<TextField fx:id="acntInterestRate" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="6" alignment="CENTER_RIGHT" />
+	<Label text="\% w skali etapu" GridPane.columnIndex="2"
+		GridPane.rowIndex="6" />
+
+	<Label text="Oprocentowanie kredytu" GridPane.columnIndex="0"
+		GridPane.rowIndex="7" />
+	<TextField fx:id="creditInterestRate" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="7" alignment="CENTER_RIGHT" />
+	<Label text="\% w skali etapu" GridPane.columnIndex="2"
+		GridPane.rowIndex="7" />
+
+	<Label text="Stawka podatku" GridPane.columnIndex="0"
+		GridPane.rowIndex="8" />
+	<TextField fx:id="taxRate" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="8" alignment="CENTER_RIGHT" />
+	<Label text="\% w skali etapu" GridPane.columnIndex="2"
+		GridPane.rowIndex="8" />
+
+	<Label text="Niesprzedane produktu skupowane za"
+		GridPane.columnIndex="0" GridPane.rowIndex="9" />
+	<TextField fx:id="resalesRate" promptText="0.00"
+		GridPane.columnIndex="1" GridPane.rowIndex="9" alignment="CENTER_RIGHT" />
+	<Label text="\% kosztów produkcji" GridPane.columnIndex="2"
+		GridPane.rowIndex="9" />
+
+	<Label text="Maksymalna zdolność produkcyjna"
+		GridPane.columnIndex="0" GridPane.rowIndex="10" />
+	<TextField fx:id="maxProdCapacity" promptText="0"
+		GridPane.columnIndex="1" GridPane.rowIndex="10" alignment="CENTER_RIGHT" />
+
+	<Label text="Minimalna jakość produktu" GridPane.columnIndex="0"
+		GridPane.rowIndex="11" />
+	<TextField fx:id="minQuality" promptText="0"
+		GridPane.columnIndex="1" GridPane.rowIndex="11" alignment="CENTER_RIGHT" />
+
+	<Label text="Maksymalna jakość produktu" GridPane.columnIndex="0"
+		GridPane.rowIndex="12" />
+	<TextField fx:id="maxQuality" promptText="0"
+		GridPane.columnIndex="1" GridPane.rowIndex="12" alignment="CENTER_RIGHT" />
+
+	<HBox alignment="BOTTOM_RIGHT" spacing="10" GridPane.columnIndex="0"
+		GridPane.rowIndex="13" GridPane.columnSpan="3">
+		<Button text="Ustaw" onAction="#save" />
+		<Button text="Anuluj" onAction="#close" />
+	</HBox>
+
+</GridPane>
+
